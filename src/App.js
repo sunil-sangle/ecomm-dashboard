@@ -1,14 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
 import {Button} from 'react-bootstrap';
+import Header from './Header';
+import {BrowserRouter} from 'react-router-dom';
+import "./Assets/style.css";
 
 
 function App() {
   return (
     <div className="App">
-      <h1>Test my App</h1>
-      <button>MyButton</button>
-      <Button>bootstrap button</Button>
+      <BrowserRouter>
+        <Header/>
+      </BrowserRouter>
     </div>
   );
 }
