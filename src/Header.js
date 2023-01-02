@@ -1,20 +1,28 @@
 import React from "react";
 import {Navbar,Nav,Container} from 'react-bootstrap';
-import {NavLink} from 'react-router-dom'
+import {BrowserRouter} from 'react-router-dom';
+import {Link} from 'react-router-dom';
+
+import logo from './Assets/images/ecom-logo.png' // relative path to image 
 
 function Header()
 {
     return (
      <> 
-      <Navbar bg="primary" variant="dark">
+      <Navbar bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand href="#home">Logo</Navbar.Brand>
-          <Nav className="me-auto NavLinks">
-            <NavLink>Login</NavLink>
-            <NavLink>Register</NavLink>
-            <NavLink>Update Product</NavLink>
-          </Nav>
+          
+            <Link className="logo" to="/"> <img src={logo} alt={"logo"}/></Link>
+            <Nav className="my-auto NavLinks">
+              <Link to="login">Login</Link>
+              <Link to="register">Register</Link>
+              <Link to="addproduct">Add Product</Link>
+              <Link to="updateproduct">Update Product</Link>
+              <Link to="timeCounter">Time-Counter</Link>
+            </Nav>
+        
         </Container>
+      
       </Navbar>
         </>
     )

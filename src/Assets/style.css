@@ -1,9 +1,70 @@
+.App nav{
+    padding: 1rem 0;
+}
+
 .NavLinks a {
     color: #fff;
-    padding:1rem 1.5rem;
+    padding:.5rem 1rem;
     text-decoration: none;
     font-weight: 700;
+    margin: .5rem;
+    position: relative;
 }
+.NavLinks a::after{
+    content: '';
+    background: #fff;
+    width: 1px;
+    height: 16px;
+    position: absolute;
+    margin-top: 5px;
+    left: 108%;
+}
+.NavLinks a:last-child::after{
+    background: none;
+}
+
 .NavLinks a:hover{
-    color: rgb(177, 245, 83);
+    color: rgb(228, 85, 241);
+}   
+.logo{
+    padding:.3rem 1rem;
+    width: 120px;
+    height: auto;
+    background: #fff;
+    margin-right: 0rem;
 }
+.logo img{
+    max-width: 100%;
+    display: block;
+}
+.timevalue{
+    font-size: 30px;
+    font-weight: bold;
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding: 20px 0;
+}
+.btn-group-lg button{
+    margin: 50px 30px;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.btn-group-lg button:disabled{
+    background: red;
+    opacity: .2;
+}
+.btn-group-lg button.stop:disabled{
+    background: black;
+    opacity: .2;
+}
+
+
+.btn-group-lg button.red-btn{
+    background-color: red;
+  }
+  
+  .btn-group-lg button.blue-btn {
+    background-color: #0d6efd;
+  }
